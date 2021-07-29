@@ -1,0 +1,37 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: #36D7B7;
+    --primary-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+}
+
+/* Landing Page */
+.landing-container {
+    display: flex;
+}
+
+.landing-image-container {
+    width: 60%;
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing {
+    width: 40%;
+    height: 100vh;
+}
+
+.landing span{
+    
+}
+
