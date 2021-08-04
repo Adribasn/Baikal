@@ -1,12 +1,13 @@
 import React from 'react';
 import './LandingPageStyle.css';
+import ColoredLogo from './assets/baikal-colored-text.svg';
 
 export const LandingPage = () => {
     return (
         <div className="grid-container">
             <div className="item-1">
                 <div class="logo-container-1">
-                    <img src="/home/adribas/Documents/dev/Baikal/frontend/assets/baikal-colored-text.svg"></img>
+                    <img src={ColoredTextLogo}></img>
                 </div>
                 <h1>Happening now</h1>
                 <h2>Join Baikal today.</h2>

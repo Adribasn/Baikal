@@ -17,12 +17,12 @@ body {
 }
 
 .item-1 {
-    background-color: blue;
+    background-color: #fff;
     grid-area: item-1;
 }
 
 .item-2 {
-    background-color: blueviolet;
+    background-color: #36D7B7;
     grid-area: item-2;
 }
 
@@ -41,5 +41,9 @@ body {
         grid-template-columns: auto 700px;
         grid-template-areas: 
             "item-2 item-1";
+    }
+
+    .logo-container-1 {
+        height: 50vh;
     }
 }
