@@ -7,8 +7,39 @@
 
 body {
     font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
 }
 
-.landing-grid {
+.grid-container {
     display: grid;
+    height: 100vh;
+}
+
+.item-1 {
+    background-color: blue;
+    grid-area: item-1;
+}
+
+.item-2 {
+    background-color: blueviolet;
+    grid-area: item-2;
+}
+
+@media (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 75vh);
+        grid-template-areas: 
+            "item-1"
+            "item-2";
+    }
+}
+
+@media (min-width: 1001px) {
+    .grid-container {
+        grid-template-columns: auto 700px;
+        grid-template-areas: 
+            "item-2 item-1";
+    }
 }
