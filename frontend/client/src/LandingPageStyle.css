@@ -49,7 +49,7 @@ body {
         justify-content: center;
     }
 
-    .item-1-inner-container {
+    .item-1-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
