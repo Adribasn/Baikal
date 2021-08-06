@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-/*
+
 :root {
     --primary-color: #36D7B7;
     --primary-font: 'Lato', sans-serif;
@@ -13,24 +13,22 @@ body {
     font-weight: bold;
 }
 
-.grid-container {
+.gridContainer {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
 }
 
 @media (min-width: 700px) {
-    .grid-container {
+    .gridContainer {
         background-color: #36D7B7;
     }
 
-    .item-1 {
+    .itemOne {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .item-1 {
+    .itemOne {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -39,7 +37,7 @@ body {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
-    .item-1 input{
+    .itemOne input{
         transition: all .2s ease-in-out;
         border-radius: 5px;
         all: none;
@@ -47,31 +45,30 @@ body {
         padding: .3em;
     }
 
-    .item-1 input:focus {
+    .itemOne input:focus {
         outline: none;
         border:2px solid #36D7B7;
         color: #0c5344;
     }
 
-    #first-name {
+    .firstName {
         margin-bottom: .5em;
     }
 
-    #last-name {
+    .lastName {
         margin-top: .5em;
         margin-bottom: .5em;
     }
 
-    #email {
+    .email {
         margin-top: .5em;
         margin-bottom: 2em;
     }
 
-    #register-button {
+    .registerButton {
         width: 100%;
         padding: .5em;
         border-radius: 5em;
         transition: all .5s ease-in-out;
     }
 }
-*/

@@ -12,24 +12,24 @@ body {
     font-weight: bold;
 }
 
-.grid-container {
+.gridContainer {
     display: grid;
     height: 100vh;
 }
 
-.item-1 {
+.itemOne {
     background-color: #fff;
     grid-area: item-1;
 }
 
-.item-2 {
+.itemTwo {
     background-color: #36D7B7;
     grid-area: item-2;
 }
 
 
 @media (max-width: 1000px) {
-    .grid-container {
+    .gridContainer {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 75vh);
         grid-template-areas: 
@@ -37,73 +37,76 @@ body {
             "item-2";
     }
 
-    #colored-logo {
+    .coloredLogo {
         width: 40%;
         margin-top: 0em;
         margin-bottom: 2em;
     }
     
-    .item-1 {
+    .itemOne {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
     }
 
-    .item-1-container {
+    .itemOneContainer {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .item-1 h1,h2 {
+    .itemOne h1,h2 {
         margin-left: 5%;
     }
 
-    .button-container {
+    .buttonContainer {
         display: flex;
         flex-direction: column;
         width: 80%;
     }
 
-    .button-container button {
+    .signupButton {
         all: unset;
         width: 100%;
         text-align: center;
         border-radius: 5em;
         height: 2em;
         transition: .5s ease-in-out;
-    }
-
-    #signup-button {
         background-color: #36D7B7;
         border: 2px solid #36D7B7;
         color: #fff;
         margin-bottom: .5em;
     }
 
-    #signup-button:hover {
+    .signupButton:hover {
         background-color: #30b49a;
         border: 2px solid #30b49a
     }
 
-    #login-button {
+    .loginButton {
+        all: unset;
+        width: 100%;
+        text-align: center;
+        border-radius: 5em;
+        height: 2em;
+        transition: .5s ease-in-out;
         border: 2px solid #36D7B7;
         color: #36D7B7;
         margin-top: .5em;
     }
 
-    #login-button:hover {
+    .loginButton:hover {
         background-color: #30b49a;
         color: #fff;
         border: 2px solid #30b49a;
     }
 
-    #white-logo {
+    .whiteLogo {
         width: 50%;
     }
 
-    .item-2 {
+    .itemTwo {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -111,77 +114,76 @@ body {
 }
 
 @media (min-width: 1001px) {
-    .grid-container {
+    .gridContainer {
         grid-template-columns: auto 700px;
         grid-template-areas: 
             "item-2 item-1";
     }
     
-    #colored-logo {
+    .coloredLogo {
         width: 20%;
         margin-top: 2em;
         margin-bottom: 2em;
-        margin-left: 5%;
     }
     
-    .item-1-container {
+    .itemOneContainer {
         display: flex;
         align-items: center;
     }
 
-    .item-1 {
+    .itemOne {
         display: flex;
         flex-direction: column;
-    }
-
-    .item-1 h1,h2 {
         margin-left: 5%;
     }
 
-    .button-container {
+    .buttonContainer {
         display: flex;
         flex-direction: column;
+        width: 80%;
     }
 
-    .button-container button {
+    .signupButton {
         all: unset;
-        width: 50%;
+        width: 100%;
         text-align: center;
         border-radius: 5em;
         height: 2em;
         transition: .5s ease-in-out;
-        margin-left: 5%;
-    }
-
-    #signup-button {
         background-color: #36D7B7;
         border: 2px solid #36D7B7;
         color: #fff;
         margin-bottom: .5em;
     }
 
-    #signup-button:hover {
+    .signupButton:hover {
         background-color: #30b49a;
         border: 2px solid #30b49a
     }
 
-    #login-button {
+    .loginButton {
+        all: unset;
+        width: 100%;
+        text-align: center;
+        border-radius: 5em;
+        height: 2em;
+        transition: .5s ease-in-out;
         border: 2px solid #36D7B7;
         color: #36D7B7;
         margin-top: .5em;
     }
 
-    #login-button:hover {
+    .loginButton:hover {
         background-color: #30b49a;
         color: #fff;
         border: 2px solid #30b49a;
     }
 
-    #white-logo {
+    .whiteLogo {
         width: 50%;
     }
 
-    .item-2 {
+    .itemTwo {
         display: flex;
         align-items: center;
         justify-content: center;
