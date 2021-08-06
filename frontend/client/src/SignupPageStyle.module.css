@@ -15,29 +15,40 @@ body {
 
 .gridContainer {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
 }
 
 @media (min-width: 700px) {
     .gridContainer {
-        background-color: #36D7B7;
+        background-color: #fff;
     }
 
-    .itemOne {
+    .itemOneContainer {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        background-color: #36D7B7;
     }
 
     .itemOne {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         padding: 4em;
-        border-radius: 0em;
+        border-radius: 1em;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: #fff;
     }
 
-    .itemOne input{
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstName {
+        margin-bottom: .5em;
         transition: all .2s ease-in-out;
         border-radius: 5px;
         all: none;
@@ -45,30 +56,57 @@ body {
         padding: .3em;
     }
 
-    .itemOne input:focus {
+    .firstName:focus {
         outline: none;
         border:2px solid #36D7B7;
         color: #0c5344;
     }
 
-    .firstName {
-        margin-bottom: .5em;
-    }
-
     .lastName {
         margin-top: .5em;
         margin-bottom: .5em;
+        transition: all .2s ease-in-out;
+        border-radius: 5px;
+        all: none;
+        border: 2px solid #bbb;
+        padding: .3em;
+    }
+
+    .lastName:focus {
+        outline: none;
+        border:2px solid #36D7B7;
+        color: #0c5344;
     }
 
     .email {
         margin-top: .5em;
         margin-bottom: 2em;
+        transition: all .2s ease-in-out;
+        border-radius: 5px;
+        all: none;
+        border: 2px solid #bbb;
+        padding: .3em;
+    }
+
+    .email:focus {
+        outline: none;
+        border:2px solid #36D7B7;
+        color: #0c5344;
     }
 
     .registerButton {
-        width: 100%;
+        all: unset;
+        text-align: center;
+        background-color: #36D7B7;
+        width: 89%;
         padding: .5em;
         border-radius: 5em;
         transition: all .5s ease-in-out;
+        color: black;
+    }
+
+    .registerButton:hover {
+        background-color: #29a58c;
+        color: #fff;
     }
 }
