@@ -3,6 +3,11 @@ import { LoginPage } from './LoginPage';
 import { HomePage } from './HomePage';
 import { LandingPage } from './LandingPage';
 import { SignupPage } from './SignupPage';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCampground, faBell, faEnvelope, faUser, faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCampground, faBell, faEnvelope, faUser, faFeatherAlt);
  
 function App() {
   return (
