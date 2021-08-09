@@ -26,13 +26,15 @@ body {
     grid-area: nav;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 579px) {
     .gridContainer {
         grid-template-columns:  1fr;
         grid-template-rows: 1fr 50px;
         grid-template-areas: 
         "feed"
         "nav";
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 1);
     }
 
     .feedContainer {
@@ -47,8 +49,49 @@ body {
         background-color: #fff;
     }
 
-    .navLogo {
+    .navList {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        grid-template-areas: "navHomeLink navNotificationsLink navMessagesLink navProfileLink navWriteLink" ;
+    }
+
+    .navLogoListItem {
         display: none;
+    }
+
+    .navText {
+        display: none;
+    }
+
+    .navHomeLink {
+        color: #36D7B7;
+        grid-area: navHomeLink;
+    }
+
+    .navNotificationsLink {
+        color: black;
+        grid-area: navNotificationsLink;
+    }
+
+    .navMessagesLink {
+        color: black;
+        grid-area: navMessagesLink;
+    }
+
+    .navProfileLink {
+        color: black;
+        grid-area: navProfileLink;
+    }
+
+    .navWriteLink {
+        color: black;
+        grid-area: navWriteLink;
     }
 
     .feedHeader {
@@ -69,7 +112,7 @@ body {
 
 }
 
-@media screen and (min-width: 500px) and (max-width: 1279px) {
+@media screen and (min-width: 580px) and (max-width: 1279px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
@@ -105,6 +148,52 @@ body {
     .navText {
         display: none;
     }
+
+    .navHomeLink {
+        color: #36D7B7;
+        transition: .3s ease-in-out;
+    }
+
+    .navNotificationsLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navMessagesLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navProfileLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navWriteLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navHomeLink:hover {
+        color: #36D7B7;
+    }
+
+    .navNotificationsLink:hover {
+        color: #36D7B7;
+    }
+
+    .navMessagesLink:hover {
+        color: #36D7B7;
+    }
+
+    .navProfileLink:hover {
+        color: #36D7B7;
+    }
+
+    .navWriteLink:hover {
+        color: #36D7B7;
+    }
+
 
     .feedHeader {
         background-color: #fff;
@@ -145,6 +234,9 @@ body {
 
     .navList {
         list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .navListItem {
@@ -156,28 +248,49 @@ body {
         padding-left: .5em;
     }
 
-    .navHomeText {
-        color: #36D7B7;
-    }
-
     .navHomeLink {
         color: #36D7B7;
+        transition: .3s ease-in-out;
     }
 
     .navNotificationsLink {
         color: black;
+        transition: .3s ease-in-out;
     }
 
     .navMessagesLink {
         color: black;
+        transition: .3s ease-in-out;
     }
 
     .navProfileLink {
         color: black;
+        transition: .3s ease-in-out;
     }
 
     .navWriteLink {
         color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navHomeLink:hover {
+        color: #36D7B7;
+    }
+
+    .navNotificationsLink:hover {
+        color: #36D7B7;
+    }
+
+    .navMessagesLink:hover {
+        color: #36D7B7;
+    }
+
+    .navProfileLink:hover {
+        color: #36D7B7;
+    }
+
+    .navWriteLink:hover {
+        color: #36D7B7;
     }
 
     .navLogo {
