@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 :root {
     --primary-color: #36D7B7;
@@ -26,7 +26,7 @@ body {
     grid-area: nav;
 }
 
-@media screen and (max-width: 579px) {
+@media screen and (max-width: 580px) {
     .gridContainer {
         grid-template-columns:  1fr;
         grid-template-rows: 1fr 50px;
@@ -96,10 +96,22 @@ body {
 
     .feedHeader {
         background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .headerProfilePicture {
-        width: 10%;
+        width: 8%;
+        margin-left: .5em;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: 1em;
     }
 
     .postWritingContainer {
@@ -109,14 +121,12 @@ body {
     .userFeed {
         background-color: #fff;
     }
-
 }
 
-@media screen and (min-width: 580px) and (max-width: 1279px) {
+@media screen and (min-width: 580px) and (max-width: 1280px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
-        grid-gap: .5px;
         background-color: rgba(224, 224, 224, 0.5);
     }
 
@@ -124,12 +134,16 @@ body {
         background-color: #fff;
         display: grid;
         grid-template-rows: 10% 20% 1fr;
-        grid-gap: .5px;
         background-color: rgba(224, 224, 224, 0.5);
+        grid-template-areas: 
+            "feedHeader"
+            "postWritingContainer"
+            "userFeed";
     }
 
     .nav {
         background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
     }
 
     .navList {
@@ -197,18 +211,34 @@ body {
 
     .feedHeader {
         background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        display: flex;
+        align-items: center;
+        grid-area: feedHeader;
     }
 
     .headerProfilePicture {
         display: none;
     }
 
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: .5em;
+    }
+
     .postWritingContainer {
         background-color: #fff;
+        grid-area: postWritingContainer;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-bottom: 7px solid rgb(247, 249, 249);
     }
 
     .userFeed {
         background-color: #fff;
+        grid-area: userFeed;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-top: 7px solid rgb(247, 249, 249);
     }
 }
 
@@ -216,7 +246,6 @@ body {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
-        grid-gap: .5px;
         background-color: rgba(224, 224, 224, 0.5);
     }
 
@@ -224,24 +253,65 @@ body {
         background-color: #fff;
         display: grid;
         grid-template-rows: 10% 20% 1fr;
-        grid-gap: .5px;
         background-color: rgba(224, 224, 224, 0.5);
+        grid-template-areas: 
+            "feedHeader"
+            "postWritingContainer"
+            "userFeed";
     }
 
     .nav {
         background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+    }
+
+    .navHomeLogo {
+        grid-area: navHomeLogo;
+    }
+
+    .navHomeText {
+        grid-area: navHomeText;
+    }
+
+    .navNotificationsLogo {
+        grid-area: navNotificationsLogo;
+    }
+
+    .navNotificationsText {
+        grid-area: navNotificationsText;
+    }
+
+    .navMessagesLogo {
+        grid-area: navMessagesLogo;
+    }
+
+    .navMessagesText {
+        grid-area: navMessagesText;
+    }
+
+    .navProfileLogo {
+        grid-area: navProfileLogo;
+    }
+
+    .navProfileText {
+        grid-area: navProfileText;
+    }
+
+    .navWriteLogo {
+        grid-area: navWriteLogo;
+    }   
+
+    .navWriteText {
+        grid-area: navWriteText;
     }
 
     .navList {
         list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
     .navListItem {
-        padding-top: .5em;
-        padding-bottom: .5em;
+        padding-top: .75em;
+        padding-bottom: .75em;
     }
 
     .navText {
@@ -295,21 +365,38 @@ body {
 
     .navLogo {
         width: 42px;
+        grid-area: navLogo;
     }
 
     .feedHeader {
         background-color: #fff;
+        grid-area: feedHeader;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        display: flex;
+        align-items: center;
     }
 
     .headerProfilePicture {
         display: none;
     }
 
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: .5em;
+    }
+
     .postWritingContainer {
         background-color: #fff;
+        grid-area: postWritingContainer;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-bottom: 7px solid rgb(247, 249, 249);
     }
 
     .userFeed {
         background-color: #fff;
+        grid-area: userFeed;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-top: 7px solid rgb(247, 249, 249);
     }
 }
