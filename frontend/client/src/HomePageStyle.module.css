@@ -35,27 +35,91 @@ body {
         "nav";
     }
 
-    .feed {
-        background-color: blueviolet;
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 7% 1fr;
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 1);
     }
 
     .nav {
-        background-color: blue;
+        background-color: #fff;
     }
+
+    .navLogo {
+        display: none;
+    }
+
+    .feedHeader {
+        background-color: #fff;
+    }
+
+    .headerProfilePicture {
+        width: 10%;
+    }
+
+    .postWritingContainer {
+        display: none;
+    }
+
+    .userFeed {
+        background-color: #fff;
+    }
+
 }
 
 @media screen and (min-width: 500px) and (max-width: 1279px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feed {
-        background-color: blueviolet;
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 10% 20% 1fr;
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 0.5);
     }
 
     .nav {
-        background-color: blue;
+        background-color: #fff;
+    }
+
+    .navList {
+        list-style-type: none;
+    }
+
+    .navListItem {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .navLogo {
+        width: 42px;
+    }
+
+    .navText {
+        display: none;
+    }
+
+    .feedHeader {
+        background-color: #fff;
+    }
+
+    .headerProfilePicture {
+        display: none;
+    }
+
+    .postWritingContainer {
+        background-color: #fff;
+    }
+
+    .userFeed {
+        background-color: #fff;
     }
 }
 
@@ -63,13 +127,76 @@ body {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feed {
-        background-color: blueviolet;
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 10% 20% 1fr;
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 0.5);
     }
 
     .nav {
-        background-color: blue;
+        background-color: #fff;
+    }
+
+    .navList {
+        list-style-type: none;
+    }
+
+    .navListItem {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .navText {
+        padding-left: .5em;
+    }
+
+    .navHomeText {
+        color: #36D7B7;
+    }
+
+    .navHomeLink {
+        color: #36D7B7;
+    }
+
+    .navNotificationsLink {
+        color: black;
+    }
+
+    .navMessagesLink {
+        color: black;
+    }
+
+    .navProfileLink {
+        color: black;
+    }
+
+    .navWriteLink {
+        color: black;
+    }
+
+    .navLogo {
+        width: 42px;
+    }
+
+    .feedHeader {
+        background-color: #fff;
+    }
+
+    .headerProfilePicture {
+        display: none;
+    }
+
+    .postWritingContainer {
+        background-color: #fff;
+    }
+
+    .userFeed {
+        background-color: #fff;
     }
 }
