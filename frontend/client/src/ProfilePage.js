@@ -19,15 +19,25 @@ export const ProfilePage = () => {
                     <li className={ProfileCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={ProfileCSS.navWriteLink} to="/home"><FontAwesomeIcon icon="feather-alt" className={ProfileCSS.navWriteLogo} size='2x'/><span className={[ProfileCSS.navWriteText, ProfileCSS.navText].join(' ')}>Write</span></Link></li>
                 </ul>
             </nav>
-            <main className={ProfileCSS.feedContainer}>
-                <header className={ProfileCSS.feedHeader}>
-                    <img className={ProfileCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={ProfileCSS.feedHeaderText}></span>
+            <main className={ProfileCSS.profileContainer}>
+                <header className={ProfileCSS.profileHeader}>
+                    <img className={ProfileCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={ProfileCSS.profileHeaderText}>USERNAME-PLACEHOLDER</span>
                 </header>
-                <div className={ProfileCSS.postWritingContainer}>
-                    postWritingContainer
-                </div>
-                <div className={ProfileCSS.userFeed}>
-                    userFeed
+                <div className={ProfileCSS.userProfileContainer}>
+                    <div className={ProfileCSS.userProfile}>
+                        <div className={ProfileCSS.profileBannerContainer}>
+                            ProfileBanner
+                        </div>
+                        <div className={ProfileCSS.profilePictureContainer}>
+                            ProfilePicture
+                        </div>
+                        <div className={ProfileCSS.profileBioContainer}>
+                            ProfileBio
+                        </div>
+                    </div>
+                    <div className={ProfileCSS.userPostsContainer}>
+                        userPosts
+                    </div>
                 </div>
             </main>
         </div>

@@ -37,7 +37,7 @@ body {
         background-color: rgba(224, 224, 224, 1);
     }
 
-    .feedContainer {
+    .profileContainer {
         background-color: #fff;
         display: grid;
         grid-template-rows: 7% 1fr;
@@ -94,7 +94,7 @@ body {
         grid-area: navWriteLink;
     }
 
-    .feedHeader {
+    .profileHeader {
         background-color: #fff;
         display: flex;
         flex-direction: row;
@@ -108,17 +108,13 @@ body {
         border-radius: 50%;
     }
 
-    .feedHeaderText {
+    .profileHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: 1em;
     }
 
-    .postWritingContainer {
-        display: none;
-    }
-
-    .userFeed {
+    .userProfileContainer {
         background-color: #fff;
     }
 }
@@ -130,15 +126,14 @@ body {
         background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feedContainer {
+    .profileContainer {
         background-color: #fff;
         display: grid;
-        grid-template-rows: 10% 20% 1fr;
+        grid-template-rows: 10% 1fr;
         background-color: rgba(224, 224, 224, 0.5);
         grid-template-areas: 
-            "feedHeader"
-            "postWritingContainer"
-            "userFeed";
+            "profileHeader"
+            "userProfileContainer";
     }
 
     .nav {
@@ -209,34 +204,27 @@ body {
     }
 
 
-    .feedHeader {
+    .profileHeader {
         background-color: #fff;
         border: .25px solid rgba(224, 224, 224, 0.5);
         display: flex;
         align-items: center;
-        grid-area: feedHeader;
+        grid-area: profileHeader;
     }
 
     .headerProfilePicture {
         display: none;
     }
 
-    .feedHeaderText {
+    .profileHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: .5em;
     }
 
-    .postWritingContainer {
+    .userProfileContainer {
         background-color: #fff;
-        grid-area: postWritingContainer;
-        border: .25px solid rgba(224, 224, 224, 0.5);
-        border-bottom: 7px solid rgb(247, 249, 249);
-    }
-
-    .userFeed {
-        background-color: #fff;
-        grid-area: userFeed;
+        grid-area: userProfileContainer;
         border: .25px solid rgba(224, 224, 224, 0.5);
         border-top: 7px solid rgb(247, 249, 249);
     }
@@ -249,15 +237,14 @@ body {
         background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feedContainer {
+    .profileContainer {
         background-color: #fff;
         display: grid;
-        grid-template-rows: 10% 20% 1fr;
+        grid-template-rows: 10% 1fr;
         background-color: rgba(224, 224, 224, 0.5);
         grid-template-areas: 
-            "feedHeader"
-            "postWritingContainer"
-            "userFeed";
+            "profileHeader"
+            "userProfileContainer";
     }
 
     .nav {
@@ -368,9 +355,9 @@ body {
         grid-area: navLogo;
     }
 
-    .feedHeader {
+    .profileHeader {
         background-color: #fff;
-        grid-area: feedHeader;
+        grid-area: profileHeader;
         border: .25px solid rgba(224, 224, 224, 0.5);
         display: flex;
         align-items: center;
@@ -380,22 +367,15 @@ body {
         display: none;
     }
 
-    .feedHeaderText {
+    .profileHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: .5em;
     }
 
-    .postWritingContainer {
+    .userProfileContainer {
         background-color: #fff;
-        grid-area: postWritingContainer;
-        border: .25px solid rgba(224, 224, 224, 0.5);
-        border-bottom: 7px solid rgb(247, 249, 249);
-    }
-
-    .userFeed {
-        background-color: #fff;
-        grid-area: userFeed;
+        grid-area: userProfileContainer;
         border: .25px solid rgba(224, 224, 224, 0.5);
         border-top: 7px solid rgb(247, 249, 249);
     }
