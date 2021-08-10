@@ -37,7 +37,7 @@ body {
         background-color: rgba(224, 224, 224, 1);
     }
 
-    .feedContainer {
+    .notificationsContainer {
         background-color: #fff;
         display: grid;
         grid-template-rows: 7% 1fr;
@@ -94,7 +94,7 @@ body {
         grid-area: navWriteLink;
     }
 
-    .feedHeader {
+    .notificationsHeader {
         background-color: #fff;
         display: flex;
         flex-direction: row;
@@ -108,17 +108,13 @@ body {
         border-radius: 50%;
     }
 
-    .feedHeaderText {
+    .notificationsHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: 1em;
     }
 
-    .postWritingContainer {
-        display: none;
-    }
-
-    .userFeed {
+    .userNotifications {
         background-color: #fff;
     }
 }
@@ -130,15 +126,14 @@ body {
         background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feedContainer {
+    .notificationsContainer {
         background-color: #fff;
         display: grid;
-        grid-template-rows: 10% 20% 1fr;
+        grid-template-rows: 10% 1fr;
         background-color: rgba(224, 224, 224, 0.5);
         grid-template-areas: 
             "feedHeader"
-            "postWritingContainer"
-            "userFeed";
+            "userNotifications";
     }
 
     .nav {
@@ -209,7 +204,7 @@ body {
     }
 
 
-    .feedHeader {
+    .notificationsHeader {
         background-color: #fff;
         border: .25px solid rgba(224, 224, 224, 0.5);
         display: flex;
@@ -221,7 +216,7 @@ body {
         display: none;
     }
 
-    .feedHeaderText {
+    .notificationsHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: .5em;
@@ -240,6 +235,11 @@ body {
         border: .25px solid rgba(224, 224, 224, 0.5);
         border-top: 7px solid rgb(247, 249, 249);
     }
+
+    .userNotifications {
+        background-color: #fff;
+        grid-area: userNotifications;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -249,15 +249,14 @@ body {
         background-color: rgba(224, 224, 224, 0.5);
     }
 
-    .feedContainer {
+    .notificationsContainer {
         background-color: #fff;
         display: grid;
-        grid-template-rows: 10% 20% 1fr;
+        grid-template-rows: 10% 1fr;
         background-color: rgba(224, 224, 224, 0.5);
         grid-template-areas: 
             "feedHeader"
-            "postWritingContainer"
-            "userFeed";
+            "userNotifications";
     }
 
     .nav {
@@ -368,7 +367,7 @@ body {
         grid-area: navLogo;
     }
 
-    .feedHeader {
+    .notificationsHeader {
         background-color: #fff;
         grid-area: feedHeader;
         border: .25px solid rgba(224, 224, 224, 0.5);
@@ -380,7 +379,7 @@ body {
         display: none;
     }
 
-    .feedHeaderText {
+    .notificationsHeaderText {
         font-weight: 900;
         font-size: 1.5rem;
         padding-left: .5em;
@@ -398,5 +397,10 @@ body {
         grid-area: userFeed;
         border: .25px solid rgba(224, 224, 224, 0.5);
         border-top: 7px solid rgb(247, 249, 249);
+    }
+
+    .userNotifications {
+        background-color: #fff;
+        grid-area: userNotifications;
     }
 }

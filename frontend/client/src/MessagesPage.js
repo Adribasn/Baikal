@@ -19,17 +19,22 @@ export const MessagesPage = () => {
                     <li className={MessagesCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={MessagesCSS.navWriteLink} to="/home"><FontAwesomeIcon icon="feather-alt" className={MessagesCSS.navWriteLogo} size='2x'/><span className={[MessagesCSS.navWriteText, MessagesCSS.navText].join(' ')}>Write</span></Link></li>
                 </ul>
             </nav>
-            <main className={MessagesCSS.feedContainer}>
-                <header className={MessagesCSS.feedHeader}>
-                    <img className={MessagesCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={MessagesCSS.feedHeaderText}>Messages</span>
-                </header>
-                <div className={MessagesCSS.postWritingContainer}>
-                    postWritingContainer
-                </div>
-                <div className={MessagesCSS.userFeed}>
-                    userFeed
+            <main className={MessagesCSS.messagesContainer}>
+                <header className={MessagesCSS.messagesHeader}>
+                    <img className={MessagesCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={MessagesCSS.messagesHeaderText}>Messages</span><FontAwesomeIcon icon="plus" className={MessagesCSS.addMessageLogo} size="2x" />                </header>
+                <div className={MessagesCSS.userMessages}>
+                    <div className={MessagesCSS.messagesSearchBarContainer}>
+                        <input className={MessagesCSS.messagesSearchBar} placeholder="Search for people or groups"></input>
+                    </div>
+
+                    <div className={MessagesCSS.messagesConvos}>
+                        MessagesConvos
+                    </div>
                 </div>
             </main>
+            <div className={MessagesCSS.currentConvo}>
+                currentConvo
+            </div>
         </div>
     )
 }

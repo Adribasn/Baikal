@@ -19,15 +19,12 @@ export const NotificationsPage = () => {
                     <li className={NotificationsCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={NotificationsCSS.navWriteLink} to="/home"><FontAwesomeIcon icon="feather-alt" className={NotificationsCSS.navWriteLogo} size='2x'/><span className={[NotificationsCSS.navWriteText, NotificationsCSS.navText].join(' ')}>Write</span></Link></li>
                 </ul>
             </nav>
-            <main className={NotificationsCSS.feedContainer}>
-                <header className={NotificationsCSS.feedHeader}>
-                    <img className={NotificationsCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={NotificationsCSS.feedHeaderText}>Notifications</span>
+            <main className={NotificationsCSS.notificationsContainer}>
+                <header className={NotificationsCSS.notificationsHeader}>
+                    <img className={NotificationsCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={NotificationsCSS.notificationsHeaderText}>Notifications</span>
                 </header>
-                <div className={NotificationsCSS.postWritingContainer}>
-                    postWritingContainer
-                </div>
-                <div className={NotificationsCSS.userFeed}>
-                    userFeed
+                <div className={NotificationsCSS.userNotifications}>
+                    userNotifications
                 </div>
             </main>
         </div>

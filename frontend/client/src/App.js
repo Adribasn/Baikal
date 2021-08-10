@@ -8,9 +8,9 @@ import { MessagesPage } from './MessagesPage';
 import { ProfilePage } from './ProfilePage';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCampground, faFlag, faComments, faUser, faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faCampground, faFlag, faComments, faUser, faFeatherAlt);
+library.add(fab, faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus);
  
 function App() {
   return (

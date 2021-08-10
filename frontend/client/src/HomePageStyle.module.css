@@ -479,6 +479,11 @@ body {
         height: 70%;
     }
 
+    .postButton:hover {
+        background-color: #27a088;
+        color: #fff;
+    }
+
     .userFeed {
         background-color: #fff;
         grid-area: userFeed;
