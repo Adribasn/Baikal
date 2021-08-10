@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+    --primary-color: #36D7B7;
+    --primary-font: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.gridContainer {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+}
+
+.feed {
+    grid-area: feed;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+@media screen and (max-width: 580px) {
+    .gridContainer {
+        grid-template-columns:  1fr;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas: 
+        "feed"
+        "nav";
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 1);
+    }
+
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 7% 1fr;
+        grid-gap: .5px;
+        background-color: rgba(224, 224, 224, 1);
+    }
+
+    .nav {
+        background-color: #fff;
+    }
+
+    .navList {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        grid-template-areas: "navHomeLink navNotificationsLink navMessagesLink navProfileLink navWriteLink" ;
+    }
+
+    .navLogoListItem {
+        display: none;
+    }
+
+    .navText {
+        display: none;
+    }
+
+    .navHomeLink {
+        color: #36D7B7;
+        grid-area: navHomeLink;
+    }
+
+    .navNotificationsLink {
+        color: black;
+        grid-area: navNotificationsLink;
+    }
+
+    .navMessagesLink {
+        color: black;
+        grid-area: navMessagesLink;
+    }
+
+    .navProfileLink {
+        color: black;
+        grid-area: navProfileLink;
+    }
+
+    .navWriteLink {
+        color: black;
+        grid-area: navWriteLink;
+    }
+
+    .feedHeader {
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .headerProfilePicture {
+        width: 8%;
+        margin-left: .5em;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: 1em;
+    }
+
+    .postWritingContainer {
+        display: none;
+    }
+
+    .userFeed {
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 1280px) {
+    .gridContainer {
+        grid-template-columns: 15% 1fr;
+        grid-template-areas: "nav feed";
+        background-color: rgba(224, 224, 224, 0.5);
+    }
+
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 10% 20% 1fr;
+        background-color: rgba(224, 224, 224, 0.5);
+        grid-template-areas: 
+            "feedHeader"
+            "postWritingContainer"
+            "userFeed";
+    }
+
+    .nav {
+        background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+    }
+
+    .navList {
+        list-style-type: none;
+    }
+
+    .navListItem {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .navLogo {
+        width: 42px;
+    }
+
+    .navText {
+        display: none;
+    }
+
+    .navHomeLink {
+        color: #36D7B7;
+        transition: .3s ease-in-out;
+    }
+
+    .navNotificationsLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navMessagesLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navProfileLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navWriteLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navHomeLink:hover {
+        color: #36D7B7;
+    }
+
+    .navNotificationsLink:hover {
+        color: #36D7B7;
+    }
+
+    .navMessagesLink:hover {
+        color: #36D7B7;
+    }
+
+    .navProfileLink:hover {
+        color: #36D7B7;
+    }
+
+    .navWriteLink:hover {
+        color: #36D7B7;
+    }
+
+
+    .feedHeader {
+        background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        display: flex;
+        align-items: center;
+        grid-area: feedHeader;
+    }
+
+    .headerProfilePicture {
+        display: none;
+    }
+
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: .5em;
+    }
+
+    .postWritingContainer {
+        background-color: #fff;
+        grid-area: postWritingContainer;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-bottom: 7px solid rgb(247, 249, 249);
+    }
+
+    .userFeed {
+        background-color: #fff;
+        grid-area: userFeed;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-top: 7px solid rgb(247, 249, 249);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .gridContainer {
+        grid-template-columns: 15% 1fr;
+        grid-template-areas: "nav feed";
+        background-color: rgba(224, 224, 224, 0.5);
+    }
+
+    .feedContainer {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 10% 20% 1fr;
+        background-color: rgba(224, 224, 224, 0.5);
+        grid-template-areas: 
+            "feedHeader"
+            "postWritingContainer"
+            "userFeed";
+    }
+
+    .nav {
+        background-color: #fff;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+    }
+
+    .navHomeLogo {
+        grid-area: navHomeLogo;
+    }
+
+    .navHomeText {
+        grid-area: navHomeText;
+    }
+
+    .navNotificationsLogo {
+        grid-area: navNotificationsLogo;
+    }
+
+    .navNotificationsText {
+        grid-area: navNotificationsText;
+    }
+
+    .navMessagesLogo {
+        grid-area: navMessagesLogo;
+    }
+
+    .navMessagesText {
+        grid-area: navMessagesText;
+    }
+
+    .navProfileLogo {
+        grid-area: navProfileLogo;
+    }
+
+    .navProfileText {
+        grid-area: navProfileText;
+    }
+
+    .navWriteLogo {
+        grid-area: navWriteLogo;
+    }   
+
+    .navWriteText {
+        grid-area: navWriteText;
+    }
+
+    .navList {
+        list-style-type: none;
+    }
+
+    .navListItem {
+        padding-top: .75em;
+        padding-bottom: .75em;
+    }
+
+    .navText {
+        padding-left: .5em;
+    }
+
+    .navHomeLink {
+        color: #36D7B7;
+        transition: .3s ease-in-out;
+    }
+
+    .navNotificationsLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navMessagesLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navProfileLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navWriteLink {
+        color: black;
+        transition: .3s ease-in-out;
+    }
+
+    .navHomeLink:hover {
+        color: #36D7B7;
+    }
+
+    .navNotificationsLink:hover {
+        color: #36D7B7;
+    }
+
+    .navMessagesLink:hover {
+        color: #36D7B7;
+    }
+
+    .navProfileLink:hover {
+        color: #36D7B7;
+    }
+
+    .navWriteLink:hover {
+        color: #36D7B7;
+    }
+
+    .navLogo {
+        width: 42px;
+        grid-area: navLogo;
+    }
+
+    .feedHeader {
+        background-color: #fff;
+        grid-area: feedHeader;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        display: flex;
+        align-items: center;
+    }
+
+    .headerProfilePicture {
+        display: none;
+    }
+
+    .feedHeaderText {
+        font-weight: 900;
+        font-size: 1.5rem;
+        padding-left: .5em;
+    }
+
+    .postWritingContainer {
+        background-color: #fff;
+        grid-area: postWritingContainer;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-bottom: 7px solid rgb(247, 249, 249);
+    }
+
+    .userFeed {
+        background-color: #fff;
+        grid-area: userFeed;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-top: 7px solid rgb(247, 249, 249);
+    }
+}
