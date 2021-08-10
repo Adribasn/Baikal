@@ -15,7 +15,7 @@ export const HomePage = () => {
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navHomeLink} to="/home"><FontAwesomeIcon icon="campground" className={HomeCSS.navHomeLogo} size='2x'/><span className={[HomeCSS.navHomeText, HomeCSS.navText].join(' ')}>Home</span></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navNotificationsLink} to="/notifications"><FontAwesomeIcon icon="flag" className={HomeCSS.navNotificationsLogo} size='2x'/><span className={[HomeCSS.navNotificationsText, HomeCSS.navText].join(' ')}>Notifications</span></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navMessagesLink} to="/messages"><FontAwesomeIcon icon="comments" className={HomeCSS.navMessagesLogo} size='2x'/><span className={[HomeCSS.navMessagesText, HomeCSS.navText].join(' ')}>Messages</span></Link></li>
-                    <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navProfileLink} to="/home"><FontAwesomeIcon icon="user" className={HomeCSS.navProfileLogo} size='2x'/><span className={[HomeCSS.navUserText, HomeCSS.navText].join(' ')}>Profile</span></Link></li>
+                    <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navProfileLink} to="/:profile"><FontAwesomeIcon icon="user" className={HomeCSS.navProfileLogo} size='2x'/><span className={[HomeCSS.navUserText, HomeCSS.navText].join(' ')}>Profile</span></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navWriteLink} to="/home"><FontAwesomeIcon icon="feather-alt" className={HomeCSS.navWriteLogo} size='2x'/><span className={[HomeCSS.navWriteText, HomeCSS.navText].join(' ')}>Write</span></Link></li>
                 </ul>
             </nav>
@@ -24,7 +24,11 @@ export const HomePage = () => {
                     <img className={HomeCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={HomeCSS.feedHeaderText}>Home</span>
                 </header>
                 <div className={HomeCSS.postWritingContainer}>
-                    postWritingContainer
+                    <div className={HomeCSS.postInputContainer}>
+                        <img className={HomeCSS.postProfilePicture} src={BlankProfilePicture}></img>
+                        <input type="text" placeholder="What's happening?" className={HomeCSS.postInput}></input>
+                    </div>
+                    <button className={HomeCSS.postButton}>Post</button>
                 </div>
                 <div className={HomeCSS.userFeed}>
                     userFeed
