@@ -38,8 +38,11 @@ export const ProfilePage = () => {
                         <div className={ProfileCSS.profileBioContainer}>
                             <button className={ProfileCSS.editProfileButton}>Edit</button>
                             <h1 className={ProfileCSS.profileUserNameText}>USERNAME-PLACEHOLDER</h1>
-                            <p className={ProfileCSS.profileBio}>BIO-PLACEHOLDER</p>
+                            <div className={ProfileCSS.profileBioDiv}>
+                                <p className={ProfileCSS.profileBio}>BIO-PLACEHOLDER</p>
+                            </div>
                             
+                            {/*
                             <div className={ProfileCSS.profileCountContainer}>
                                 <div className={ProfileCSS.profileFollowingCountCountainer}>
                                     <h3 className={ProfileCSS.profileFollowingCount}>0</h3>
@@ -51,6 +54,7 @@ export const ProfilePage = () => {
                                     <h3 className={ProfileCSS.profileFollowersText}>Followers</h3>
                                 </div>
                             </div>
+                            */}
                         </div>
                     </div>
                     <div className={ProfileCSS.userPostsContainer}>

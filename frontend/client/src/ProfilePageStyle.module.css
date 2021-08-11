@@ -117,9 +117,143 @@ body {
     .userProfileContainer {
         background-color: #fff;
     }
+
+    .userProfile {
+        display: grid;
+        grid-template-rows: repeat(6, 10vh);
+        grid-template-columns: repeat(6, 1fr);
+        margin: 0;
+        padding: 0;
+    }
+
+    .profileBannerContainer {
+        grid-row: 1 / span 3;    
+        grid-column: 1 / span 7;
+    }
+
+    .profileBannerDiv {
+        background-color: rgb(224, 224, 224);
+        height: 100%;
+    }
+
+    .profilePictureContainer {
+        grid-row: 3 / span 2;
+        grid-column: 1 / span 1;
+        background-color: transparent;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profilePictureDiv {
+        border-radius: 50%;
+        background-color: #fff;
+        height: 100%;
+        width: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profilePicture {
+        width: 90%;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+
+    .profileBioContainer {
+        grid-row: 4 / span 3;
+        grid-column: 1 / span 7;
+        background-color: #fff;
+        border-bottom: .25px solid rgba(224, 224, 224, 0.5);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0,1fr));
+        grid-template-areas: 
+            "editProfileButton"
+            "profileUserNameText"
+            "profileBioDiv";
+        align-items: center;
+    }
+
+    .editProfileButton {
+        all: unset;
+        width: 20%;
+        height: 40%;
+        background-color: #fff;
+        border: 2px solid #36D7B7;
+        color: #36D7B7;
+        font-size: 1.25rem;
+        margin-left: 70%;
+        margin-top: .5em;
+        padding: .25em;
+        text-align: center;
+        border-radius: 5em;
+        transition: .3s ease-in-out;
+        font-weight: 900;
+        grid-area: editProfileButton;
+    }
+    
+    .editProfileButton:hover {
+        background-color: #36d7b773;
+        color: #fff;
+    }
+
+    .profileUserNameText {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left: 3%;
+        margin-top: 1em;
+        grid-area: profileUserNameText;
+    }
+
+    .profileBio {
+        margin-left: 3%;
+        font-size: .75rem;
+        grid-area: profileBio;
+    }
+
+    .profileCountContainer {
+        display: flex;
+    }
+
+    .profileFollowingCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 3%;
+        margin-right: .5em;
+    }
+
+    .profileFollowingCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowingText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
+
+    .profileFollowersCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: .5em;
+    }
+
+    .profileFollowersCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowersText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
 }
 
-@media screen and (min-width: 580px) and (max-width: 1280px) {
+@media screen and (min-width: 580px) and (max-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
@@ -228,9 +362,143 @@ body {
         border: .25px solid rgba(224, 224, 224, 0.5);
         border-top: 7px solid rgb(247, 249, 249);
     }
+
+    .userProfile {
+        display: grid;
+        grid-template-rows: repeat(6, 10vh);
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .profileBannerContainer {
+        grid-row: 1 / span 3;    
+        grid-column: 1 / span 7;
+    }
+
+    .profileBannerDiv {
+        background-color: rgb(224, 224, 224);
+        height: 100%;
+    }
+
+    .profilePictureContainer {
+        grid-row: 3 / span 2;
+        grid-column: 1 / span 1;
+        background-color: transparent;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profilePictureDiv {
+        border-radius: 50%;
+        background-color: #fff;
+        height: 100%;
+        width: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profilePicture {
+        width: 90%;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+
+    .profileBioContainer {
+        grid-row: 4 / span 3;
+        grid-column: 1 / span 7;
+        background-color: #fff;
+        border-bottom: .25px solid rgba(224, 224, 224, 0.5);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0,1fr));
+        grid-template-areas: 
+            "editProfileButton"
+            "profileUserNameText"
+            "profileBioDiv";
+        align-items: center;
+    }
+
+    .editProfileButton {
+        all: unset;
+        width: 10%;
+        height: 60%;
+        background-color: #fff;
+        border: 2px solid #36D7B7;
+        color: #36D7B7;
+        font-size: 1.25rem;
+        grid-area: editProfileButton;
+        text-align: center;
+        border-radius: 5em;
+        transition: .3s ease-in-out;
+        font-weight: 900;
+        margin-left: 80%;
+    }
+    
+    .editProfileButton:hover {
+        background-color: #36d7b773;
+        color: #fff;
+    }
+
+    .profileUserNameText {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left: 3%;
+        margin-top: 1em;
+        grid-area: profileUserNameText;
+    }
+
+    .profileBioDiv {
+        grid-area: profileBioDiv;
+        height: 100%;
+    }
+
+    .profileBio {
+        font-size: .75rem;
+        margin-left: 3%;
+    }
+
+    .profileCountContainer {
+        display: flex;
+    }
+
+    .profileFollowingCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 3%;
+        margin-right: .5em;
+    }
+
+    .profileFollowingCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowingText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
+
+    .profileFollowersCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: .5em;
+    }
+
+    .profileFollowersCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowersText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
@@ -428,22 +696,30 @@ body {
         border-bottom: .25px solid rgba(224, 224, 224, 0.5);
         margin: 0;
         padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0,1fr));
+        grid-template-areas: 
+            "editProfileButton"
+            "profileUserNameText"
+            "profileBioDiv";
+        align-items: center;
     }
 
     .editProfileButton {
         all: unset;
         width: 10%;
+        height: 60%;
         background-color: #fff;
         border: 2px solid #36D7B7;
         color: #36D7B7;
         font-size: 1.25rem;
-        margin-left: 75%;
-        margin-top: .5em;
-        padding: .25em;
         text-align: center;
         border-radius: 5em;
         transition: .3s ease-in-out;
         font-weight: 900;
+        grid-area: editProfileButton;
+        margin-left: 80%;
     }
     
     .editProfileButton:hover {
@@ -454,17 +730,25 @@ body {
     .profileUserNameText {
         font-size: 1rem;
         font-weight: 700;
+        grid-area: profileUserNameText;
         margin-left: 3%;
-        margin-top: 1em;
+    }
+
+    .profileBioDiv {
+        grid-area: profileBioDiv;
+        height: 100%;
     }
 
     .profileBio {
-        margin-left: 3%;
         font-size: .75rem;
+        margin: 0;
+        padding: 0;
+        margin-left: 3%;
     }
 
     .profileCountContainer {
         display: flex;
+        grid-area: profileCountContainer;
     }
 
     .profileFollowingCountCountainer {
