@@ -22,13 +22,18 @@ body {
     grid-area: nav;
 }
 
+@media screen and (max-width: 480px) {
+    .headerProfilePicture {
+        display: none;
+    }
+}
 @media screen and (max-width: 580px) {
     .gridContainer {
         grid-template-columns:  1fr;
         grid-template-rows: 1fr 50px;
         grid-template-areas: 
-        "feed"
-        "nav";
+            "messagesContainer"
+            "nav";
         grid-gap: .5px;
         background-color: rgba(224, 224, 224, 1);
     }
@@ -36,9 +41,14 @@ body {
     .messagesContainer {
         background-color: #fff;
         display: grid;
-        grid-template-rows: 7% 1fr;
-        grid-gap: .5px;
-        background-color: rgba(224, 224, 224, 1);
+        grid-area: messagesContainer;
+        grid-template-rows: 10% 1fr;
+        background-color: rgba(224, 224, 224, 0.5);
+        display: grid;
+        grid-template-areas: 
+            "messagesHeader"
+            "userMessages";
+
     }
 
     .nav {
@@ -113,9 +123,60 @@ body {
     .userMessages {
         background-color: #fff;
     }
+
+    .addMessageLogo {
+        margin-left: 50%;
+        margin-right: 1em;
+        color: #36D7B7;
+        transition: .3s ease-in-out;
+    }
+
+    .addMessageLogo:hover {
+        scale: 1.15;
+        color: #27a088;
+    }
+
+    .userMessages {
+        background-color: #fff;
+        grid-area: userMessages;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+        border-top: 7px solid rgb(247, 249, 249);
+        display: grid;
+        grid-template-rows: 14% 1fr;
+        grid-template-areas: 
+        "messagesSearchBarContainer"
+        "messagesConvos";
+        justify-items: center;
+    }
+
+    .messagesSearchBarContainer {
+        grid-area: messagesSearchBarContainer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: .25px solid rgba(224, 224, 224, 0.5);
+    }
+
+    .messagesSearchBar {
+        all: unset;
+        background-color: rgb(240, 240, 240);
+        border-radius: 5em;
+        padding-left: 1em;
+        width: 75%;
+        height: 50%;
+    }
+
+    .messagesConvos {
+        grid-area: messagesConvos;
+    }
+
+    .currentConvo {
+        display: none;
+    }
 }
 
-@media screen and (min-width: 580px) and (max-width: 1280px) {
+@media screen and (min-width: 580px) and (max-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr 1fr;
         grid-template-areas: "nav messagesContainer currentConvo";
@@ -200,7 +261,6 @@ body {
         color: #36D7B7;
     }
 
-
     .messagesHeader {
         background-color: #fff;
         border: .25px solid rgba(224, 224, 224, 0.5);
@@ -221,6 +281,7 @@ body {
 
     .addMessageLogo {
         margin-left: 8em;
+        margin-right: 1em;
         color: #36D7B7;
         transition: .3s ease-in-out;
     }
@@ -263,6 +324,7 @@ body {
 
     .messagesConvos {
         grid-area: messagesConvos;
+        background-color: #fff;
     }
 
     .currentConvo {
@@ -271,7 +333,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr 1fr;
         grid-template-areas: "nav messagesContainer currentConvo";

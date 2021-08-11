@@ -124,7 +124,7 @@ body {
     }
 }
 
-@media screen and (min-width: 580px) and (max-width: 1280px) {
+@media screen and (min-width: 580px) and (max-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
@@ -288,7 +288,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1270px) {
     .gridContainer {
         grid-template-columns: 15% 1fr;
         grid-template-areas: "nav feed";
