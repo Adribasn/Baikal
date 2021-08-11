@@ -389,21 +389,114 @@ body {
     .profileBannerContainer {
         grid-row: 1 / span 3;    
         grid-column: 1 / span 7;
-        background-color: red;
+    }
+
+    .profileBannerDiv {
+        background-color: rgb(224, 224, 224);
+        height: 100%;
     }
 
     .profilePictureContainer {
         grid-row: 3 / span 2;
         grid-column: 1 / span 1;
-        background-color: violet;
+        background-color: transparent;
         z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profilePictureDiv {
+        border-radius: 50%;
+        background-color: #fff;
+        height: 100%;
+        width: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profilePicture {
+        width: 90%;
+        border-radius: 50%;
+        object-fit: contain;
     }
 
     .profileBioContainer {
         grid-row: 4 / span 3;
         grid-column: 1 / span 7;
-        background-color: yellow;
+        background-color: #fff;
+        border-bottom: .25px solid rgba(224, 224, 224, 0.5);
+        margin: 0;
+        padding: 0;
     }
 
+    .editProfileButton {
+        all: unset;
+        width: 10%;
+        background-color: #fff;
+        border: 2px solid #36D7B7;
+        color: #36D7B7;
+        font-size: 1.25rem;
+        margin-left: 75%;
+        margin-top: .5em;
+        padding: .25em;
+        text-align: center;
+        border-radius: 5em;
+        transition: .3s ease-in-out;
+        font-weight: 900;
+    }
+    
+    .editProfileButton:hover {
+        background-color: #36d7b773;
+        color: #fff;
+    }
 
+    .profileUserNameText {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left: 3%;
+        margin-top: 1em;
+    }
+
+    .profileBio {
+        margin-left: 3%;
+        font-size: .75rem;
+    }
+
+    .profileCountContainer {
+        display: flex;
+    }
+
+    .profileFollowingCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 3%;
+        margin-right: .5em;
+    }
+
+    .profileFollowingCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowingText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
+
+    .profileFollowersCountCountainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: .5em;
+    }
+
+    .profileFollowersCount {
+        margin-right: .25em;
+    }
+
+    .profileFollowersText {
+        margin-left: .25em;
+        color: rgb(134, 134, 134);
+        font-weight: 400;
+    }
 }

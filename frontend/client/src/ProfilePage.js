@@ -26,13 +26,31 @@ export const ProfilePage = () => {
                 <div className={ProfileCSS.userProfileContainer}>
                     <div className={ProfileCSS.userProfile}>
                         <div className={ProfileCSS.profileBannerContainer}>
-                            ProfileBanner
+                            <div className={ProfileCSS.profileBannerDiv}>
+                                
+                            </div>
                         </div>
                         <div className={ProfileCSS.profilePictureContainer}>
-                            ProfilePicture
+                            <div className={ProfileCSS.profilePictureDiv}>
+                                <img src={BlankProfilePicture} className={ProfileCSS.profilePicture}></img>
+                            </div>
                         </div>
                         <div className={ProfileCSS.profileBioContainer}>
-                            ProfileBio
+                            <button className={ProfileCSS.editProfileButton}>Edit</button>
+                            <h1 className={ProfileCSS.profileUserNameText}>USERNAME-PLACEHOLDER</h1>
+                            <p className={ProfileCSS.profileBio}>BIO-PLACEHOLDER</p>
+                            
+                            <div className={ProfileCSS.profileCountContainer}>
+                                <div className={ProfileCSS.profileFollowingCountCountainer}>
+                                    <h3 className={ProfileCSS.profileFollowingCount}>0</h3>
+                                    <h3 className={ProfileCSS.profileFollowingText}>Following</h3>
+                                </div>
+                            
+                                <div className={ProfileCSS.profileFollowersCountCountainer}>
+                                    <h3 className={ProfileCSS.profileFollowersCount}>0</h3>
+                                    <h3 className={ProfileCSS.profileFollowersText}>Followers</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className={ProfileCSS.userPostsContainer}>
