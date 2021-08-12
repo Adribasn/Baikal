@@ -26,6 +26,16 @@ body {
     grid-area: nav;
 }
 
+@media screen and (max-width: 480px) {
+    .headerProfilePicture {
+        display: none;
+    }
+
+    .profileHeader {
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 580px) {
     .gridContainer {
         grid-template-columns:  1fr;
@@ -435,6 +445,7 @@ body {
         transition: .3s ease-in-out;
         font-weight: 900;
         margin-left: 80%;
+        min-width: 4em;
     }
     
     .editProfileButton:hover {
