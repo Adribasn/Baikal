@@ -36,7 +36,10 @@ export const ProfilePage = () => {
                             </div>
                         </div>
                         <div className={ProfileCSS.profileBioContainer}>
-                            <button className={ProfileCSS.editProfileButton}>Edit</button>
+                            <div className={ProfileCSS.profileButtonContainer}>
+                                <button className={ProfileCSS.editProfileButton}>Edit</button>
+                                <button className={ProfileCSS.signOutProfileButton}>Sign out</button>
+                            </div>
                             <h1 className={ProfileCSS.profileUserNameText}>USERNAME-PLACEHOLDER</h1>
                             <div className={ProfileCSS.profileBioDiv}>
                                 <p className={ProfileCSS.profileBio}>BIO-PLACEHOLDER</p>
