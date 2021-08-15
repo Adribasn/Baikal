@@ -52,6 +52,10 @@ body {
         flex-direction: column;
     }
 
+    .errorMessage {
+        color: #D2042D;
+    }
+
     .email {
         margin-bottom: .5em;
         transition: all .2s ease-in-out;
@@ -129,6 +133,11 @@ body {
     .inputContainer {
         display: flex;
         flex-direction: column;
+        transition: .5s ease-in-out;
+    }
+
+    .errorMessage {
+        color: #D2042D;
     }
 
     .email {

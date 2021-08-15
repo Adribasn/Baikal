@@ -89,7 +89,7 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         grid-area: navHomeLink;
     }
 
@@ -104,7 +104,7 @@ body {
     }
 
     .navProfileLink {
-        color: black;
+        color: #36D7B7;
         grid-area: navProfileLink;
     }
 
@@ -335,7 +335,7 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         transition: .3s ease-in-out;
     }
 
@@ -350,7 +350,7 @@ body {
     }
 
     .navProfileLink {
-        color: black;
+        color: #36D7B7;
         transition: .3s ease-in-out;
     }
 
@@ -640,7 +640,7 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         transition: .3s ease-in-out;
     }
 
@@ -655,7 +655,7 @@ body {
     }
 
     .navProfileLink {
-        color: black;
+        color: #36D7B7;
         transition: .3s ease-in-out;
     }
 

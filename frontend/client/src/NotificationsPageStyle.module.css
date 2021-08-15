@@ -70,12 +70,12 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         grid-area: navHomeLink;
     }
 
     .navNotificationsLink {
-        color: black;
+        color: #36D7B7;
         grid-area: navNotificationsLink;
     }
 
@@ -159,12 +159,12 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         transition: .3s ease-in-out;
     }
 
     .navNotificationsLink {
-        color: black;
+        color: #36D7B7;
         transition: .3s ease-in-out;
     }
 
@@ -318,12 +318,12 @@ body {
     }
 
     .navHomeLink {
-        color: #36D7B7;
+        color: black;
         transition: .3s ease-in-out;
     }
 
     .navNotificationsLink {
-        color: black;
+        color: #36D7B7;
         transition: .3s ease-in-out;
     }
 
