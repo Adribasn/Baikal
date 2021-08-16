@@ -16,9 +16,9 @@ export const LoginPage = (props) => {
                         <h1 className={LoginCSS.welcome}>Welcome</h1>
                         <div className={LoginCSS.inputContainer}>
                             <input className={LoginCSS.email} autoFocus required value={email} name="email" type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input>
-                            <p className={LoginCSS.errorMessage}>{emailError}</p>
+                            <p className={LoginCSS.errorMessage} style={{ display: emailError === '' ? 'none' : '' }}>{emailError}</p>
                             <input className={LoginCSS.password} required value={password} placeholder="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
-                            <p className={LoginCSS.errorMessage}>{passwordError}</p>
+                            <p className={LoginCSS.errorMessage} style={{ display: passwordError === '' ? 'none' : '' }}>{passwordError}</p>
                         </div>   
                         <button className={LoginCSS.loginButton} type="submit" onClick={buttonFunc}>Login</button>
                     </div>

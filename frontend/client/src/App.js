@@ -13,6 +13,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { SignupPageRedirection } from './SignupPageRedirection';
+import { LandingPageRedirection } from './LandingPageRedirection';
 
 
 library.add(fab, faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus);
@@ -102,6 +103,7 @@ function App() {
             <Route exact path="/profile" component={ProfilePage}><ProfilePage HandleLogout={HandleLogout} /></Route>
             <Route exact path='/login' component={LoginPageRedirection}><LoginPageRedirection /></Route>
             <Route exact path='/signup' component={SignupPageRedirection}><SignupPageRedirection /></Route>
+            <Route exact path='/' component={LandingPageRedirection}><LandingPageRedirection /></Route>
           </React.Fragment>
         ) : (
           <React.Fragment>

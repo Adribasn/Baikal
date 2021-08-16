@@ -5,8 +5,22 @@ import ColoredLogo from './assets/baikal-colored-logo.svg';
 import WhiteLogo from './assets/baikal-white-logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BlankProfilePicture from './assets/blank-profile-picture.png';
+import fire from './fire';
 
 export const HomePage = () => {
+    const setNames = () => {
+        var firstname = localStorage.getItem('firstname');
+        var lastname = localStorage.getItem('lastname');
+        var userRef = fire.firestore().collection('users').doc(fire.auth().currentUser.uid);
+
+        var setWithMerge = userRef.set({
+            firstname: firstname,
+            lastname: lastname
+        }, { merge: true });
+    }
+
+    setNames();
+    
     return (
         <div className={HomeCSS.gridContainer}>
             <nav className={HomeCSS.nav}>

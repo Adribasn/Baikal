@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ColoredLogo from './assets/baikal-colored-logo.svg';
 import WhiteLogo from './assets/baikal-white-logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import fire from './fire'
 import BlankProfilePicture from './assets/blank-profile-picture.png';
 
 export const ProfilePage = (props) => {
@@ -23,7 +24,7 @@ export const ProfilePage = (props) => {
             </nav>
             <main className={ProfileCSS.profileContainer}>
                 <header className={ProfileCSS.profileHeader}>
-                    <img className={ProfileCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={ProfileCSS.profileHeaderText}>USERNAME-PLACEHOLDER</span>
+                    <img className={ProfileCSS.headerProfilePicture} src={BlankProfilePicture}></img><span className={ProfileCSS.profileHeaderText}>{fire.auth().currentUser.email}</span>
                 </header>
                 <div className={ProfileCSS.userProfileContainer}>
                     <div className={ProfileCSS.userProfile}>
