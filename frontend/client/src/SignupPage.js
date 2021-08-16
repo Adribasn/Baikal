@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import SignupCSS from './SignupPageStyle.module.css';
 
 export const SignupPage = (props) =>  {
-    const { email, password, setEmail, setPassword, HandleSignup, emailError, passwordError } = props;
+    const { user, email, password, setEmail, setPassword, HandleSignup, emailError, passwordError } = props;
+
+    const buttonFunc = () => {
+        HandleSignup();
+    }
+
 
     return (
         <div className={SignupCSS.gridContainer}> 
@@ -19,7 +24,7 @@ export const SignupPage = (props) =>  {
                             <input className={SignupCSS.password} required value={password} placeholder="password"  name="password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
                             <p className={SignupCSS.errorMessage}>{passwordError}</p>
                         </div>
-                        <Link to="/home" style={{ textDecoration: 'none' }}><button className={SignupCSS.registerButton} type="submit" onClick={HandleSignup}>Register</button></Link>
+                        <button className={SignupCSS.registerButton} type="submit" onClick={buttonFunc}>Register</button>
                     </div>
                 </div>
             </div>

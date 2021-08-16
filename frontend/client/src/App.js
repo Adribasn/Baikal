@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { LoginPage } from './LoginPage';
+import { LoginPageRedirection } from './LoginPageRedirection';
 import { HomePage } from './HomePage';
 import { LandingPage } from './LandingPage';
 import { SignupPage } from './SignupPage';
@@ -11,6 +12,7 @@ import fire from './fire';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { SignupPageRedirection } from './SignupPageRedirection';
 
 
 library.add(fab, faCampground, faFlag, faComments, faUser, faFeatherAlt, faPlus);
@@ -62,6 +64,7 @@ function App() {
           case 'auth/email-already-in-use':
           case 'auth/invalid-email':
             setEmailError(err.message);
+            break;
           case 'auth/weak-password':
             setPasswordError(err.message);
             break;
@@ -97,6 +100,8 @@ function App() {
             <Route exact path="/notifications" component={NotificationsPage}><NotificationsPage /></Route>
             <Route exact path="/messages" component={MessagesPage}><MessagesPage /></Route>
             <Route exact path="/profile" component={ProfilePage}><ProfilePage HandleLogout={HandleLogout} /></Route>
+            <Route exact path='/login' component={LoginPageRedirection}><LoginPageRedirection /></Route>
+            <Route exact path='/signup' component={SignupPageRedirection}><SignupPageRedirection /></Route>
           </React.Fragment>
         ) : (
           <React.Fragment>

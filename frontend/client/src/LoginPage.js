@@ -1,9 +1,12 @@
 import React from 'react';
 import LoginCSS from './LoginPageStyle.module.css';
-import { Link } from 'react-router-dom';
 
 export const LoginPage = (props) => {
     const { email, password, setEmail, setPassword, HandleLogin, emailError, passwordError } = props;
+
+    const buttonFunc = () => {
+        HandleLogin();
+    }
 
     return (
         <div className={LoginCSS.gridContainer}>
@@ -16,8 +19,8 @@ export const LoginPage = (props) => {
                             <p className={LoginCSS.errorMessage}>{emailError}</p>
                             <input className={LoginCSS.password} required value={password} placeholder="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
                             <p className={LoginCSS.errorMessage}>{passwordError}</p>
-                        </div>
-                        <Link to="/home" style={{ textDecoration: 'none' }}><button className={LoginCSS.loginButton} type="submit" onClick={HandleLogin}>Login</button></Link>
+                        </div>   
+                        <button className={LoginCSS.loginButton} type="submit" onClick={buttonFunc}>Login</button>
                     </div>
                 </div>
             </div>
