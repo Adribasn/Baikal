@@ -11,7 +11,7 @@ export const MessagesPage = () => {
         <div className={MessagesCSS.gridContainer}>
             <nav className={MessagesCSS.nav}>
                 <ul className={MessagesCSS.navList}>
-                    <li className={[MessagesCSS.navListItem, MessagesCSS.navLogoListItem].join(' ')}><Link className={MessagesCSS.navLogoLink} to="/home"><img src={ColoredLogo} className={MessagesCSS.navLogo}></img></Link></li>
+                    <li className={[MessagesCSS.navListItem, MessagesCSS.navLogoListItem].join(' ')}><Link className={MessagesCSS.navLogoLink} to="/home"><img alt="profilepicture" src={ColoredLogo} className={MessagesCSS.navLogo}></img></Link></li>
                     <li className={MessagesCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={MessagesCSS.navHomeLink} to="/home"><FontAwesomeIcon icon="campground" className={MessagesCSS.navHomeLogo} size='2x'/><span className={[MessagesCSS.navHomeText, MessagesCSS.navText].join(' ')}>Home</span></Link></li>
                     <li className={MessagesCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={MessagesCSS.navNotificationsLink} to="/notifications"><FontAwesomeIcon icon="flag" className={MessagesCSS.navNotificationsLogo} size='2x'/><span className={[MessagesCSS.navNotificationsText, MessagesCSS.navText].join(' ')}>Notifications</span></Link></li>
                     <li className={MessagesCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={MessagesCSS.navMessagesLink} to="/messages"><FontAwesomeIcon icon="comments" className={MessagesCSS.navMessagesLogo} size='2x'/><span className={[MessagesCSS.navMessagesText, MessagesCSS.navText].join(' ')}>Messages</span></Link></li>

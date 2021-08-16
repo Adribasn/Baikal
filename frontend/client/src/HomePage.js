@@ -11,7 +11,7 @@ export const HomePage = () => {
         <div className={HomeCSS.gridContainer}>
             <nav className={HomeCSS.nav}>
                 <ul className={HomeCSS.navList}>
-                    <li className={[HomeCSS.navListItem, HomeCSS.navLogoListItem].join(' ')}><Link className={HomeCSS.navLogoLink} to="/home"><img src={ColoredLogo} className={HomeCSS.navLogo}></img></Link></li>
+                    <li className={[HomeCSS.navListItem, HomeCSS.navLogoListItem].join(' ')}><Link className={HomeCSS.navLogoLink} to="/home"><img alt="profilepicture" src={ColoredLogo} className={HomeCSS.navLogo}></img></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navHomeLink} to="/home"><FontAwesomeIcon icon="campground" className={HomeCSS.navHomeLogo} size='2x'/><span className={[HomeCSS.navHomeText, HomeCSS.navText].join(' ')}>Home</span></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navNotificationsLink} to="/notifications"><FontAwesomeIcon icon="flag" className={HomeCSS.navNotificationsLogo} size='2x'/><span className={[HomeCSS.navNotificationsText, HomeCSS.navText].join(' ')}>Notifications</span></Link></li>
                     <li className={HomeCSS.navListItem}><Link style={{ textDecoration: 'none'}} className={HomeCSS.navMessagesLink} to="/messages"><FontAwesomeIcon icon="comments" className={HomeCSS.navMessagesLogo} size='2x'/><span className={[HomeCSS.navMessagesText, HomeCSS.navText].join(' ')}>Messages</span></Link></li>
